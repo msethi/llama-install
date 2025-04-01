@@ -1,3 +1,15 @@
+
+Curl Test
+
+curl http://localhost:8000/v1/chat/completions \
+  -H "Authorization: Bearer <--add LLAMA server key here -->" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "Llama-3.2-1B-Instruct",
+    "messages": [{"role": "user", "content": "Tell me a fun fact about Jupiter."}],
+    "max_tokens": 100
+  }'
+
 # llama-install
 
 #!/bin/zsh
